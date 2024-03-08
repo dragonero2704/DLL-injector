@@ -16,7 +16,8 @@ namespace DLL_injector
         {
             get { return this.SelectProcessComboBox.SelectedProcess; }
         }
-        public string[] Files { get { return this.FilesMenu.AllFilesCollection.ToArray(); } }
+        //public string[] Files { get { return this.FilesMenu.AllFilesCollection.ToArray(); } }
+        public string[] Files => [.. this.FilesMenu.AllFilesCollection];
 
         public MainWindow()
         {
